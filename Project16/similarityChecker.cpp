@@ -16,7 +16,7 @@ public:
 		}
 	}
 
-	int checkAlphaetMatching(string str1, string str2)
+	int checkAlphaBetMatching(string str1, string str2)
 	{
 		int checkListForStr1[MAX_ALPHABET] = { 0, };
 		int checkListForStr2[MAX_ALPHABET] = { 0, };
