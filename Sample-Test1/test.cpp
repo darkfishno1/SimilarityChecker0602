@@ -9,6 +9,10 @@ TEST(SimilarityCheckTestCase, InvalidArgument) {
 }
 
 TEST(SimilarityCheckTestCase, CheckLength) {
-	EXPECT_EQ(1, 1);
-	EXPECT_TRUE(true);
+	SimilarityChecker checker;
+	EXPECT_EQ(60, checker.checkStr("AAA", "BBB"));
+	EXPECT_EQ(39, checker.checkStr("AAA", "BBBB"));
+	EXPECT_EQ(30, checker.checkStr("AA", "BBB"));
+	EXPECT_EQ(60, checker.checkStr("AAAA", "BBBB"));
+	
 }
