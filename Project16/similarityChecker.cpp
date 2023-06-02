@@ -35,9 +35,7 @@ public:
 		assertIllegalArgument(str1);
 		assertIllegalArgument(str2);
 
-		int lenScore = checkLength(str1, str2);
-
-		return lenScore;
+		return checkLength(str1, str2);
 	}
 private:
 	bool isUpperCaseAlphaBet(string inputStr) {
