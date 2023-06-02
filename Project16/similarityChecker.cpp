@@ -47,6 +47,10 @@ public:
 		int str2Len = (int)str2.length();
 		int gap;
 		int shortStrLen;
+		
+		if(str1Len == str2Len)
+			return 60;
+		
 		if(str1Len >= str2Len)
 		{
 			gap = str1Len - str2Len;
@@ -57,9 +61,6 @@ public:
 			gap = str2Len - str1Len;
 			shortStrLen = str1Len;
 		}
-
-		if (gap == 0)
-			return 60;
 
 		return (int)((1.0f - (float)gap / (float)shortStrLen) * 60);
 
