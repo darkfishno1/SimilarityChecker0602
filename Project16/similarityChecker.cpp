@@ -12,6 +12,10 @@ public:
 		int str2Len = (int)str2.length();
 		int gap;
 		int shortStrLen;
+		
+		if(str1Len == str2Len)
+			return 60;
+		
 		if(str1Len >= str2Len)
 		{
 			gap = str1Len - str2Len;
@@ -22,9 +26,6 @@ public:
 			gap = str2Len - str1Len;
 			shortStrLen = str1Len;
 		}
-
-		if (gap == 0)
-			return 60;
 
 		return (int)((1.0f - (float)gap / (float)shortStrLen) * 60);
 
@@ -49,10 +50,10 @@ private:
 
 	void assertIllegalArgument(string inputStr) {
 		if (inputStr == "") {
-			throw std::invalid_argument("°ªÀ» ³Ö¾î¾ßÇÔ");
+			throw std::invalid_argument("ê°’ì„ ë„£ì–´ì•¼í•¨");
 		}
 		if (isUpperCaseAlphaBet(inputStr)) {
-			throw std::invalid_argument("´ë¹®ÀÚ¾ËÆÄºªÀÌ ¾Æ´Ô");
+			throw std::invalid_argument("ëŒ€ë¬¸ìì•ŒíŒŒë²³ì´ ì•„ë‹˜");
 		}
 	}
 };
