@@ -16,7 +16,7 @@ public:
 		}
 	}
 
-	int checkAlphabetMatching(string str1, string str2)
+	int checkAlphaetMatching(string str1, string str2)
 	{
 		int checkListForStr1[MAX_ALPHABET] = { 0, };
 		int checkListForStr2[MAX_ALPHABET] = { 0, };
@@ -69,7 +69,7 @@ public:
 		assertIllegalArgument(str1);
 		assertIllegalArgument(str2);
 
-		return checkLength(str1, str2) + checkAlphabetMatching(str1, str2);
+		return checkLength(str1, str2) + checkAlphaBetMatching(str1, str2);
 	}
 private:
 
@@ -84,10 +84,10 @@ private:
 
 	void assertIllegalArgument(string inputStr) {
 		if (inputStr == "") {
-			throw std::invalid_argument("°ªÀ» ³Ö¾î¾ßÇÔ");
+			throw std::invalid_argument("ê°’ì„ ë„£ì–´ì•¼í•¨");
 		}
 		if (isUpperCaseAlphaBet(inputStr)) {
-			throw std::invalid_argument("´ë¹®ÀÚ¾ËÆÄºªÀÌ ¾Æ´Ô");
+			throw std::invalid_argument("ëŒ€ë¬¸ìì•ŒíŒŒë²³ì´ ì•„ë‹˜");
 		}
 	}
 };
